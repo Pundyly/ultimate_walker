@@ -1,0 +1,253 @@
+{
+  "RootObject": {
+    "__guid": "1d72bed6-28a2-4793-b399-9efdfe5d46d1",
+    "Flags": 0,
+    "Name": "debil",
+    "Enabled": true,
+    "Components": [
+      {
+        "__type": "Sandbox.CharacterController",
+        "__guid": "d343a3c9-1e6b-466a-a73f-c8247e07418a",
+        "Acceleration": 32,
+        "Bounciness": 0.3,
+        "GroundAngle": 45,
+        "Height": 64,
+        "IgnoreLayers": "trigger",
+        "Radius": 16,
+        "StepHeight": 18,
+        "UseCollisionRules": false
+      },
+      {
+        "__type": "PlayerController",
+        "__guid": "1120fd61-044e-4cd0-a6dc-d789abffde8c",
+        "Flashlight": {
+          "_type": "gameobject",
+          "go": "6c03be84-9e01-405b-b7ad-ec03062dc9c9"
+        },
+        "go": {
+          "_type": "gameobject",
+          "prefab": "prefabs/clown_ball.prefab"
+        },
+        "NPC": {
+          "_type": "gameobject",
+          "prefab": "prefabs/npc.prefab"
+        },
+        "AnimationHelper": {
+          "_type": "component",
+          "component_id": "989dede6-fc9e-4076-94a2-debf69de308f",
+          "go": "bb96e5ae-e93b-46c5-8fcd-4004232ace8f",
+          "component_type": "CitizenAnimationHelper"
+        },
+        "CharacterController": {
+          "_type": "component",
+          "component_id": "d343a3c9-1e6b-466a-a73f-c8247e07418a",
+          "go": "1d72bed6-28a2-4793-b399-9efdfe5d46d1",
+          "component_type": "CharacterController"
+        },
+        "CrouchMoveSpeed": 64,
+        "RunMoveSpeed": 190,
+        "SprintMoveSpeed": 320,
+        "WalkMoveSpeed": 110
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "bb96e5ae-e93b-46c5-8fcd-4004232ace8f",
+        "Flags": 0,
+        "Name": "Player Body",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.SkinnedModelRenderer",
+            "__guid": "5b9b1e78-8054-4fc9-a5c7-3ac44df862e0",
+            "BodyGroups": 341,
+            "CreateBoneObjects": false,
+            "Model": "models/citizen/citizen_sfm.vmdl",
+            "RenderType": "ShadowsOnly",
+            "Tint": "1,1,1,1",
+            "UseAnimGraph": true
+          },
+          {
+            "__type": "Sandbox.Citizen.CitizenAnimationHelper",
+            "__guid": "989dede6-fc9e-4076-94a2-debf69de308f",
+            "BodyWeight": 2,
+            "EyesWeight": 2,
+            "HeadWeight": 2,
+            "Height": 1,
+            "LookAtEnabled": false,
+            "Target": {
+              "_type": "component",
+              "component_id": "5b9b1e78-8054-4fc9-a5c7-3ac44df862e0",
+              "go": "bb96e5ae-e93b-46c5-8fcd-4004232ace8f",
+              "component_type": "SkinnedModelRenderer"
+            }
+          },
+          {
+            "__type": "PlayerDresser",
+            "__guid": "c69ae54a-5d76-444c-9b1f-c5b3890a35fd",
+            "BodyRenderer": {
+              "_type": "component",
+              "component_id": "5b9b1e78-8054-4fc9-a5c7-3ac44df862e0",
+              "go": "bb96e5ae-e93b-46c5-8fcd-4004232ace8f",
+              "component_type": "SkinnedModelRenderer"
+            }
+          },
+          {
+            "__type": "PlayerFootsteps",
+            "__guid": "5f899d72-92c1-431b-a80a-d05aa2c09d37",
+            "Source": {
+              "_type": "component",
+              "component_id": "5b9b1e78-8054-4fc9-a5c7-3ac44df862e0",
+              "go": "bb96e5ae-e93b-46c5-8fcd-4004232ace8f",
+              "component_type": "SkinnedModelRenderer"
+            }
+          }
+        ]
+      },
+      {
+        "__guid": "f08f32ed-4baf-4c26-a2e7-874b3e38b64b",
+        "Flags": 0,
+        "Name": "Physics Pusher",
+        "Position": "0,0,22.68671",
+        "Components": [
+          {
+            "__type": "Sandbox.BoxCollider",
+            "__guid": "b8909b12-6f80-463f-8017-90e87694661d",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Scale": "36,36,56",
+            "Static": false
+          }
+        ]
+      },
+      {
+        "__guid": "b22f4785-e22a-4741-a36d-ca2f9c800fa1",
+        "Flags": 0,
+        "Name": "Voice",
+        "Position": "42.0599,39.05991,-23.23907",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.Voice",
+            "__guid": "f94cc66a-442e-46f4-9657-b09d0b765316",
+            "Loopback": false,
+            "Mode": "PushToTalk",
+            "MorphScale": 2,
+            "MorphSmoothTime": 0.1,
+            "PushToTalkInput": "voice",
+            "Renderer": {
+              "_type": "component",
+              "component_id": "5b9b1e78-8054-4fc9-a5c7-3ac44df862e0",
+              "go": "bb96e5ae-e93b-46c5-8fcd-4004232ace8f",
+              "component_type": "SkinnedModelRenderer"
+            },
+            "Volume": 1,
+            "WorldspacePlayback": true
+          }
+        ]
+      },
+      {
+        "__guid": "6cb822b0-7ef9-45cf-9f24-e70bc46420ba",
+        "Flags": 0,
+        "Name": "World",
+        "Position": "0,0,198.0452",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.WorldPanel",
+            "__guid": "882ed21d-ced6-4563-a51b-2e8a8d84ee88",
+            "HorizontalAlign": "Center",
+            "InteractionRange": 1000,
+            "LookAtCamera": true,
+            "PanelSize": "512,512",
+            "RenderScale": 1,
+            "VerticalAlign": "Center"
+          },
+          {
+            "__type": "NameTagPanel",
+            "__guid": "34d510c4-62d4-4efd-9ad4-d1fc09d39954"
+          }
+        ]
+      },
+      {
+        "__guid": "db971a59-e41e-4101-9347-84c571ec33be",
+        "Flags": 0,
+        "Name": "Player Pusher",
+        "Position": "0,0,51",
+        "Scale": "1,1,2",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "PlayerPusher",
+            "__guid": "b04546d5-4bb1-4607-8238-dc5bcc0f5f85",
+            "Radius": 30
+          }
+        ]
+      },
+      {
+        "__guid": "d76af7a6-4f05-4c1a-ad63-89110a56170f",
+        "Flags": 0,
+        "Name": "Sheet",
+        "Position": "0,0,43.05256",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "Sandbox.ScreenPanel",
+            "__guid": "450ca688-0e6a-4cd2-8427-72b1d8adac7f",
+            "AutoScreenScale": true,
+            "Opacity": 1,
+            "Scale": 1,
+            "ZIndex": 100
+          },
+          {
+            "__type": "Panel",
+            "__guid": "0c4fb039-118a-42d2-a59a-9a6a36801521",
+            "MyStringValue": "Use - to teleport;                                                             \n              Relaod - to restart position;\n                        Right click - to create platform;\nG - to create Watermelon;\n0 - to close panel;\n\n                                            "
+          },
+          {
+            "__type": "ClosePanel",
+            "__guid": "da1732dd-87a9-478e-8ee6-4f51949538f8",
+            "Tab": {
+              "_type": "gameobject",
+              "go": "d76af7a6-4f05-4c1a-ad63-89110a56170f"
+            }
+          }
+        ]
+      },
+      {
+        "__guid": "6c03be84-9e01-405b-b7ad-ec03062dc9c9",
+        "Flags": 0,
+        "Name": "Flashlight",
+        "Position": "1.02741,0,103.5021",
+        "Tags": "light_spot,light",
+        "Enabled": true,
+        "NetworkMode": 1,
+        "Components": [
+          {
+            "__type": "Sandbox.SpotLight",
+            "__guid": "21ae6744-9b6f-4940-a81b-a9b666cd61f4",
+            "Attenuation": 4,
+            "ConeInner": 45,
+            "ConeOuter": 24.12,
+            "FogMode": "Enabled",
+            "FogStrength": 1,
+            "LightColor": "1,0.96279,0.77674,1",
+            "Radius": 500,
+            "Shadows": false
+          },
+          {
+            "__type": "Flashkight",
+            "__guid": "f18788b4-69ec-40c7-852d-7655b81dddb8"
+          }
+        ]
+      }
+    ],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

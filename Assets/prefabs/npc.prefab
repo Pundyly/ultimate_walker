@@ -1,0 +1,60 @@
+{
+  "RootObject": {
+    "__guid": "71dc3cf3-ac09-405e-8f67-81de67b89654",
+    "Flags": 0,
+    "Name": "npc",
+    "Enabled": true,
+    "NetworkMode": 1,
+    "NetworkOrphaned": 1,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "4927f89b-674f-4580-b05c-c11b7dabb4ae",
+        "BodyGroups": 11,
+        "Model": "models/sbox_props/watermelon/watermelon.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "Sandbox.NavMeshAgent",
+        "__guid": "8c020d65-50c4-43d1-8ddc-4683e7b89cea",
+        "Acceleration": 50,
+        "Height": 23.600042,
+        "MaxSpeed": 120,
+        "Radius": 8.299982,
+        "Separation": 0.25,
+        "UpdatePosition": true,
+        "UpdateRotation": true
+      },
+      {
+        "__type": "Watermelon",
+        "__guid": "2069036c-fad7-46ba-a442-740a76961bb2",
+        "agent": {
+          "_type": "component",
+          "component_id": "8c020d65-50c4-43d1-8ddc-4683e7b89cea",
+          "go": "71dc3cf3-ac09-405e-8f67-81de67b89654",
+          "component_type": "NavMeshAgent"
+        }
+      },
+      {
+        "__type": "Sandbox.CapsuleCollider",
+        "__guid": "c927d509-49c6-491f-8945-7e6f187858e4",
+        "End": "0,0,14.59999",
+        "IsTrigger": false,
+        "Radius": 7.99999,
+        "Start": "0,0,7.199996",
+        "Static": false
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [
+    "facepunch.watermelon#33881"
+  ],
+  "__version": 1
+}

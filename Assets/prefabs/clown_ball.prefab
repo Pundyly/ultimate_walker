@@ -1,0 +1,38 @@
+{
+  "RootObject": {
+    "__guid": "fdc1eae2-8a6d-4085-b7f4-b1445a523a62",
+    "Flags": 0,
+    "Name": "clown_ball",
+    "Scale": "1.8,1.8,0.2",
+    "Enabled": true,
+    "NetworkMode": 1,
+    "NetworkOrphaned": 1,
+    "OwnerTransfer": 0,
+    "Components": [
+      {
+        "__type": "Sandbox.ModelRenderer",
+        "__guid": "c2348784-167c-4812-9a67-f36667a0a75f",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/dev/box.vmdl",
+        "RenderType": "On",
+        "Tint": "1,0,0,1"
+      },
+      {
+        "__type": "Sandbox.BoxCollider",
+        "__guid": "952dfd19-94f9-477c-ac7a-bfb7e85abcee",
+        "Center": "0,0,0",
+        "IsTrigger": false,
+        "Scale": "50,50,50",
+        "Static": false
+      }
+    ],
+    "Children": [],
+    "__variables": []
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__references": [],
+  "__version": 1
+}

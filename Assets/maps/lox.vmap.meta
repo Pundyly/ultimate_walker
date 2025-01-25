@@ -1,0 +1,23 @@
+{
+  "publish": {
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "lox",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "lox",
+      "Schema": 0,
+      "IncludeSourceFiles": false,
+      "Resources": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "exorealms.17c1531bdc5c7b13#41168"
+      ],
+      "IsWhitelistDisabled": false,
+      "Metadata": {
+        "SingleAssetSource": "maps/lox.vmap",
+        "ParentPackage": "bananapeelsteam.worst_walker"
+      }
+    }
+  }
+}

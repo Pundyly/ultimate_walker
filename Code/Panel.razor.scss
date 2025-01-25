@@ -1,0 +1,19 @@
+Panel
+{
+	position: absolute;
+	top: -500;
+	left: 0;
+	right: 1000;
+	bottom: 0;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	border-radius: 20px;
+
+	.title
+	{
+		font-size: 25px;
+		font-family: Poppins;
+		color: #fff;
+	}
+}

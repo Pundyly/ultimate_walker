@@ -1,0 +1,10 @@
+{
+  "Sequences": [
+    {
+      "Source": "textures/cartoon_concrete_with_smile.png",
+      "IsLooping": true,
+      "Frames": 64
+    }
+  ],
+  "OutputTypeString": "2D"
+}
